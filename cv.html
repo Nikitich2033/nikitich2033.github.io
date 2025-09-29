@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nikita Lyakhovoy | Curriculum Vitae</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <nav class="top-nav">
+                <a class="brand" href="index.html">Nikita Lyakhovoy</a>
+                <a class="nav-link" href="cv.html">Curriculum Vitae</a>
+            </nav>
+            <div class="hero">
+                <p class="hero-label">Updated August 15, 2025</p>
+                <h1>Curriculum Vitae</h1>
+                <p class="hero-subtitle">Download the latest PDF or DOCX version, or preview the document in your browser.</p>
+                <div class="cta-group">
+                    <a class="button" href="CV_2025_INT.pdf" target="_blank" rel="noopener">Download PDF</a>
+                    <a class="button ghost" href="Nikita_Lyakhovoy_CV2025_INT.docx" target="_blank" rel="noopener">Download DOCX</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="section">
+            <div class="detail-card">
+                <h2>Contact</h2>
+                <p>London, United Kingdom</p>
+                <p><a href="tel:+447532759159">+44 7532 759159</a> | <a href="mailto:lyakhovoynikita@gmail.com">lyakhovoynikita@gmail.com</a></p>
+                <p><a href="https://github.com/Nikitich2033" target="_blank" rel="noopener noreferrer">github.com/Nikitich2033</a> | <a href="https://www.linkedin.com/in/nikita-lyakhovoy-376188228/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+            </div>
+            <div class="cv-preview detail-card">
+                <object data="CV_2025_INT.pdf" type="application/pdf">
+                    <p>Your browser cannot display the PDF. <a href="CV_2025_INT.pdf">Download the PDF</a> instead.</p>
+                </object>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Nikita Lyakhovoy</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
