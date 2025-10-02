@@ -80,7 +80,7 @@ header.site-header{position:sticky; top:0; backdrop-filter:blur(10px); backgroun
 .tags{display:flex; flex-wrap:wrap; gap:8px; margin:.5rem 0}
 .tag{font-family:"JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size:.8rem; padding:4px 8px; border-radius:8px; background:#0f172a; border:1px solid rgba(255,255,255,.08); color:#cbd5e1}
 
-.two-col{display:grid; grid-template-columns:1fr 1fr; gap:16px}
+.two-col{display:grid; grid-template-columns:1fr 1fr; gap:16px; padding:16px 0}
 footer{margin:40px 0 20px; color:var(--muted); font-size:.95rem}
 
 @media (max-width:900px){
@@ -92,6 +92,7 @@ footer{margin:40px 0 20px; color:var(--muted); font-size:.95rem}
 
 @media (max-width:720px){
   .container{padding:0 20px}
+  .two-col{padding:12px 0}
   .top-nav{flex-direction:column; align-items:flex-start; gap:16px; width:100%}
   .nav-header{width:100%; gap:12px; padding:0; margin-bottom:8px}
   .brand{font-size:1.4rem}
