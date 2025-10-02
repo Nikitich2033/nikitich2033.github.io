@@ -1,206 +1,292 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Nikita Lyakhovoy | Portfolio</title>
-    <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nikita Lyakhovoy | Portfolio</title>
+  <link rel="icon" href="logo.ico" type="image/x-icon">
+  <meta name="description" content="Junior Software Engineer focused on Python, data/quant, and blockchain (AMMs, Web3, Telegram bots)." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="site-header">
-        <div class="container">
-            <nav class="top-nav">
-                <a class="brand" href="index.html">Nikita Lyakhovoy</a>
-            </nav>
-            <div class="hero">
-                <p class="hero-label">London, United Kingdom</p>
-                <h1>Nikita Lyakhovoy</h1>
-                <p class="hero-subtitle">Junior Software Engineer | Fintech and Blockchain Developer</p>
-                <ul class="contact-list">
-                    <li><a href="tel:+447532759159">+44 7532 759159</a></li>
-                    <li><a href="mailto:lyakhovoynikita@gmail.com">lyakhovoynikita@gmail.com</a></li>
-                    <li><a href="https://www.linkedin.com/in/nikita-lyakhovoy-376188228/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-                    <li><a href="https://github.com/Nikitich2033" target="_blank" rel="noopener noreferrer">github.com/Nikitich2033</a></li>
-                </ul>
+  <header class="site-header">
+    <div class="container top-nav">
+      <a class="brand" href="#">Nikita Lyakhovoy</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#profile" class="chip">Profile</a>
+        <a href="#experience" class="chip">Experience</a>
+        <a href="#education" class="chip">Education</a>
+        <a href="#projects" class="chip">Selected Projects</a>
+        <a href="#skills" class="chip">Skills</a>
+        <a href="#contact" class="chip">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="container hero" id="profile">
+    <div class="hero-card">
+      <p class="muted">London, United Kingdom</p>
+      <h1>Junior Software Engineer &middot; Fintech &amp; Blockchain</h1>
+      <p class="hero-subtitle">UCL MSc FinTech &middot; KCL BSc Computer Science (AI). I build data-driven products: Python services, ML pipelines, AMM prototypes, and Web3 apps with clean UX.</p>
+      <ul class="contact-list" id="contact">
+        <li><a href="tel:+447532759159">+44 7532 759159</a></li>
+        <li><a href="mailto:lyakhovoynikita@gmail.com">lyakhovoynikita@gmail.com</a></li>
+        <li><a href="https://www.linkedin.com/in/nikita-lyakhovoy-376188228/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/Nikitich2033" target="_blank" rel="noopener">github.com/Nikitich2033</a></li>
+      </ul>
+      <div class="cta-row">
+        <a class="btn primary" href="#projects">View Selected Projects</a>
+        <a class="btn" href="#experience">See Experience</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <h2 style="margin-top:0">Profile</h2>
+      <p>Hands-on engineer comfortable owning delivery end-to-end: scoping, building, testing, and shipping. My recent work spans <strong>Python</strong> (data pipelines, bots, backtests), <strong>blockchain</strong> (sCrypt/FunC/Solidity), and <strong>front-end</strong> (React/TypeScript) with a focus on clarity and measurable outcomes.</p>
+      <div class="kpis" aria-label="Highlights">
+        <span class="kpi">AMM research &amp; contracts (BSV)</span>
+        <span class="kpi">Telegram bots in Python</span>
+        <span class="kpi">Backtests with Sharpe/Calmar</span>
+        <span class="kpi">React + Mini Apps</span>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <h2>Experience</h2>
+      <div class="grid">
+        <article class="detail-card col-8">
+          <header>
+            <div>
+              <h3>Digital Product &amp; Web Systems Lead</h3>
+              <p class="meta">Marqu&eacute;s de Berol &middot; Dec 2024 &mdash; Present &middot; Remote</p>
             </div>
+          </header>
+          <ul>
+            <li>Owned ecommerce and marketing stack; customised Liquid/HTML/CSS/JS themes, improving navigation flow and page speed.</li>
+            <li>Raised organic traffic by resolving crawl issues and maintaining XML sitemaps in GSC; aligned content and structure with brand.</li>
+            <li>Coordinated order flows and stock visibility; set up simple dashboards for stakeholders.</li>
+          </ul>
+        </article>
+        <article class="detail-card col-4">
+          <h4 class="muted" style="margin:0 0 8px">Tech used</h4>
+          <div class="tags">
+            <span class="tag">Liquid</span><span class="tag">HTML/CSS</span><span class="tag">JavaScript</span><span class="tag">SEO/GSC</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="grid" style="margin-top:16px">
+        <article class="detail-card col-8">
+          <header>
+            <div>
+              <h3>Research Intern</h3>
+              <p class="meta">Tokenovate &middot; May 2024 &mdash; Sep 2024 &middot; London (Hybrid)</p>
+            </div>
+          </header>
+          <ul>
+            <li>Researched DeFi liquidity (Uniswap v3/v4, Curve) and adapted AMM models for tokenised RWAs on BSV.</li>
+            <li>Prototyped sCrypt contracts and Python simulations using market data (via CCXT) to assess slippage and inventory risk.</li>
+            <li>Delivered a thesis-grade write-up linking mechanism design with measurable liquidity outcomes.</li>
+          </ul>
+        </article>
+        <article class="detail-card col-4">
+          <h4 class="muted" style="margin:0 0 8px">Tech used</h4>
+          <div class="tags">
+            <span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">CCXT</span><span class="tag">sCrypt</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="grid" style="margin-top:16px">
+        <article class="detail-card col-8">
+          <header>
+            <div>
+              <h3>Founder &amp; Lead Software Engineer</h3>
+              <p class="meta">TON FLIP ROBOT (tonflip.bot) &middot; Jan 2024 &mdash; Jul 2024 &middot; Remote</p>
+            </div>
+          </header>
+          <ul>
+            <li>Built a TON mini-game platform with FunC smart contracts for on-chain fairness and transparency.</li>
+            <li>Shipped a Telegram Mini App (React + TypeScript) and Python bots for treasury and community automation.</li>
+            <li>Instrumented analytics (GA, Hotjar) and co-organised LonTON Episode 3 with TON Society UK, StonFi, and AWS.</li>
+          </ul>
+        </article>
+        <article class="detail-card col-4">
+          <h4 class="muted" style="margin:0 0 8px">Tech used</h4>
+          <div class="tags">
+            <span class="tag">FunC</span><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Python</span><span class="tag">Telegram API</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="grid" style="margin-top:16px">
+        <article class="detail-card col-8">
+          <header>
+            <div>
+              <h3>Founder &amp; Lead Software Engineer</h3>
+              <p class="meta">MarbaLabs / &quot;BIRB&quot; &middot; May 2022 &mdash; Nov 2022 &middot; Remote</p>
+            </div>
+          </header>
+          <ul>
+            <li>Implemented NFT mint contracts (Solidity) and a React dApp with wallet integrations.</li>
+            <li>Authored a Java-based character generator; collaborated on a Unity (C#) prototype &ldquo;The Lost Birb&rdquo;.</li>
+            <li>Project received interest from Binance BNB Chain incubator.</li>
+          </ul>
+        </article>
+        <article class="detail-card col-4">
+          <h4 class="muted" style="margin:0 0 8px">Tech used</h4>
+          <div class="tags">
+            <span class="tag">Solidity</span><span class="tag">React</span><span class="tag">Java</span><span class="tag">Unity/C#</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- EDUCATION (expanded, its own big section) -->
+    <section class="section" id="education">
+      <h2>Education</h2>
+      <div class="grid">
+        <article class="detail-card col-12">
+          <header>
+            <div>
+              <h3>University College London (UCL) &mdash; MSc Financial Technology <span class="muted">(Distinction)</span></h3>
+              <p class="meta">Sep 2023 &mdash; Sep 2024 &middot; London, UK</p>
+            </div>
+          </header>
+          <ul>
+            <li><strong>Thesis:</strong> Creating Liquidity for Tokenised Real-World Assets &mdash; AMMs on BSV. Implemented <strong>sCrypt</strong> contracts and <strong>Python</strong> simulations (Pandas/NumPy/CCXT) on market data to study slippage, inventory risk, and fee/curve design.</li>
+            <li><strong>Projects:</strong> Credit-risk prediction (LogReg, SVM, Random Forest) with ROC-AUC/F1 tracking; Indicator-based trading strategies (momentum, trend, RSI) with Sharpe/Calmar/MDD and parameter sweeps.</li>
+            <li><strong>Modules:</strong> Applied Computational Finance, Financial Engineering, Advanced ML in Finance, Blockchain Technologies, Digital Finance, Technology Entrepreneurship.</li>
+          </ul>
+        </article>
+
+        <article class="detail-card col-12" style="margin-top:16px">
+          <header>
+            <div>
+              <h3>King&rsquo;s College London (KCL) &mdash; BSc Computer Science (Artificial Intelligence) <span class="muted">(Upper Second-Class Honours, 2:1)</span></h3>
+              <p class="meta">Sep 2020 &mdash; Jun 2023 &middot; London, UK</p>
+            </div>
+          </header>
+          <ul>
+            <li><strong>Dissertation (CARLA):</strong> Safety comparison of AI- vs human-driven vehicles. Built an ML scenario generator and safety-score methodology in <strong>Python</strong> with the CARLA simulator; first-class project grade.</li>
+            <li><strong>Projects:</strong> Django AI book-club recommender; Java wildlife/traffic simulations with JavaFX Scene Builder.</li>
+            <li><strong>Modules:</strong> AI Planning, AI &amp; Decision Making, Cryptography, Machine Learning, Operating Systems.</li>
+          </ul>
+        </article>
+
+        <article class="detail-card col-12" style="margin-top:16px">
+          <header>
+            <div>
+              <h3>Stowe School &mdash; A-levels</h3>
+              <p class="meta">2018 &mdash; 2020 &middot; UK</p>
+            </div>
+          </header>
+          <ul>
+            <li>Mathematics (A*), Computer Science (A), History (A*), Italian (A).</li>
+            <li><strong>Award:</strong> Barrus Prize for Computer Science (2020).</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- SELECTED PROJECTS (updated list) -->
+    <section class="section" id="projects">
+      <h2>Selected Projects</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>AMM Simulations for Tokenised RWAs</h3>
+          <p>Design and stress-test of AMM mechanisms on BSV: <strong>sCrypt</strong> prototypes + <strong>Python</strong> simulations on real market feeds. Focus on price discovery, slippage, and inventory risk.</p>
+          <div class="tags"><span class="tag">sCrypt</span><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">CCXT</span></div>
+          <p class="muted">Outcome: reproducible research code; parameter sweeps to compare fee/curve impacts.</p>
+          <p><a class="highlight-link" href="https://github.com/Nikitich2033/BSV_AMM" target="_blank" rel="noopener">BSV AMM research repo</a></p>
+        </article>
+
+        <article class="card">
+          <h3>BIRB / MarbaLabs</h3>
+          <p>Web3 NFT experience and studio: Solidity mint contracts, React dApp with wallet integrations, and Java-based character generator; Unity prototype &ldquo;The Lost Birb&rdquo;.</p>
+          <div class="tags"><span class="tag">Solidity</span><span class="tag">React</span><span class="tag">Java</span><span class="tag">Unity/C#</span></div>
+          <p><a class="highlight-link" href="https://birb-nft.tech" target="_blank" rel="noopener">birb-nft.tech</a> &nbsp;|&nbsp; <a class="highlight-link" href="https://marbalabs.info" target="_blank" rel="noopener">marbalabs.info</a></p>
+        </article>
+
+        <article class="card">
+          <h3>TON FLIP ROBOT</h3>
+          <p>Telegram Mini App with on-chain game logic on TON (FunC). Python ops bots for treasury &amp; community, analytics via GA/Hotjar.</p>
+          <div class="tags"><span class="tag">FunC</span><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Python</span><span class="tag">Telegram API</span></div>
+          <p><a class="highlight-link" href="https://tonflip.bot" target="_blank" rel="noopener">tonflip.bot</a></p>
+        </article>
+
+        <article class="card">
+          <h3>CARLA Autonomous Driving Dissertation</h3>
+          <p>Undergraduate dissertation comparing AI vs human driving safety. ML scenario generator, safety scoring, and experiment orchestration around the CARLA simulator.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">CARLA</span><span class="tag">scikit-learn</span></div>
+          <p class="muted">Outcome: first-class project; reproducible pipeline for scenario generation and scoring.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section two-col" id="skills">
+      <div>
+        <h2>Skills</h2>
+        <div class="detail-card">
+          <h3>Languages &amp; Frameworks</h3>
+          <p>Python, Java, TypeScript/JavaScript, C#, SQL, Solidity, C++, React, Django, FastAPI/Flask</p>
         </div>
-    </header>
-
-    <main class="container">
-        <section class="section">
-            <h2>Profile</h2>
-            <p>I am a recent Financial Technology MSc graduate from UCL, following a Computer Science (Artificial Intelligence) BSc at King&apos;s College London. I blend strong administrative skills with deep technical curiosity across artificial intelligence, blockchain, and finance.</p>
-            <p>My bachelor&apos;s dissertation analysed the safety of human-driven versus AI-driven vehicles in CARLA, combining machine learning scenario generation, risk scoring, and a first-class report. At UCL I researched &quot;Creating Liquidity for Tokenized Real-World Assets: Automated Market Makers on the BSV Blockchain,&quot; delivering smart contracts and data-driven simulations to evaluate liquidity for tokenised assets.</p>
-            <p>I have co-founded blockchain projects that span multiple countries, leading smart contract development, Web3 integrations, and community engagement. I am motivated to apply my skills in international finance and technology environments where multidisciplinary thinking is valued.</p>
-        </section>
-
-        <section class="section">
-            <h2>Experience</h2>
-            <article class="detail-card">
-                <header>
-                    <div>
-                        <h3>Digital Product and Web Systems Lead</h3>
-                        <p class="meta">Marques de Berol | Dec 2024 to Present | Remote</p>
-                    </div>
-                </header>
-                <ul>
-                    <li>Own the digital presence for a heritage winery, from the marketing site to ecommerce flows and stakeholder coordination.</li>
-                    <li>Refined Liquid, HTML, CSS, and JavaScript themes to improve UI, UX, and performance.</li>
-                    <li>Boosted organic discovery by resolving crawl issues, maintaining XML sitemaps, and aligning brand messaging.</li>
-                </ul>
-            </article>
-            <article class="detail-card">
-                <header>
-                    <div>
-                        <h3>Research Intern</h3>
-                        <p class="meta">Tokenovate | May 2024 to Sep 2024 | London, UK (Hybrid)</p>
-                    </div>
-                </header>
-                <ul>
-                    <li>Investigated DeFi liquidity protocols and adapted AMM models for tokenised real-world assets on the BSV blockchain.</li>
-                    <li>Designed proof-of-concept smart contract architecture and backtested pricing and slippage with CCXT.</li>
-                    <li>Delivered findings as part of the UCL MSc thesis exploring liquidity for tokenised RWAs.</li>
-                </ul>
-            </article>
-            <article class="detail-card">
-                <header>
-                    <div>
-                        <h3>Founder and Lead Software Engineer</h3>
-                        <p class="meta">TON FLIP ROBOT | Jan 2024 to Jul 2024 | Remote</p>
-                    </div>
-                </header>
-                <ul>
-                    <li>Launched a TON blockchain mini-game platform with FunC smart contracts and on-chain game logic for transparency.</li>
-                    <li>Built the web app and Telegram Mini App with React, Vite, and TypeScript, integrating analytics with Google Analytics and Hotjar.</li>
-                    <li>Created Telegram automation in Python for fund management and community engagement, and co-organised LonTON Episode 3 with TON Society UK, StonFi, and AWS.</li>
-                </ul>
-            </article>
-            <article class="detail-card">
-                <header>
-                    <div>
-                        <h3>Founder and Lead Software Engineer</h3>
-                        <p class="meta">MarbaLabs (birb-nft.tech) | May 2022 to Nov 2022 | Remote</p>
-                    </div>
-                </header>
-                <ul>
-                    <li>Founded a blockchain venture spanning teams in the UK, Nigeria, and Spain to deliver NFT-driven experiences.</li>
-                    <li>Developed Solidity smart contracts, React-based Web3 interfaces, and a Java generator for unique in-game characters.</li>
-                    <li>Partnered with Unity developers on &quot;The Lost Birb&quot; prototype and gained interest from the Binance BNB Chain incubator.</li>
-                </ul>
-            </article>
-        </section>
-
-        <section class="section">
-            <h2>Education</h2>
-            <div class="grid">
-                <article class="detail-card compact">
-                    <h3>MSc Financial Technology (Distinction)</h3>
-                    <p class="meta">University College London | Sep 2023 to Sep 2024 | London, UK</p>
-                    <ul>
-                        <li>Thesis: Creating Liquidity for Tokenized Real-World Assets with AMMs on the BSV blockchain.</li>
-                        <li>Credit risk prediction and leveraged trading analysis using Python, Pandas, NumPy, SciKit-Learn, and Matplotlib.</li>
-                        <li>Modules: Technology Entrepreneurship, Applied Computational Finance, Financial Engineering, Advanced Machine Learning in Finance, Blockchain Technologies, Digital Finance.</li>
-                    </ul>
-                </article>
-                <article class="detail-card compact">
-                    <h3>BSc Computer Science (Artificial Intelligence)</h3>
-                    <p class="meta">King&apos;s College London | Sep 2020 to Jun 2023 | London, UK</p>
-                    <ul>
-                        <li>Dissertation compared human and AI driving in CARLA using machine learning and bespoke safety scoring.</li>
-                        <li>Delivered Java wildlife and traffic simulations, plus a Django-based AI book recommendation platform.</li>
-                        <li>Modules: Artificial Intelligence Planning, Decision Making, Cryptography, Machine Learning, Operating Systems.</li>
-                    </ul>
-                </article>
-                <article class="detail-card compact">
-                    <h3>A-Levels</h3>
-                    <p class="meta">Stowe School | 2018 to 2020 | UK</p>
-                    <ul>
-                        <li>Mathematics (A*), Computer Science (A), History (A*), Italian (A).</li>
-                        <li>Capstone: C# image classification app with TensorFlow.NET and Visual Studio.</li>
-                    </ul>
-                </article>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2>Featured Work</h2>
-            <div class="cards">
-                <article class="card">
-                    <h3>TON FLIP ROBOT</h3>
-                    <p>TG mini-games platform with on-chain FunC contracts, analytics instrumentation, and community tooling.</p>
-                    <a class="link-arrow" href="https://tonflip.bot" target="_blank" rel="noopener noreferrer">Visit tonflip.bot</a>
-                </article>
-                <article class="card">
-                    <h3>Birb (MarbaLabs)</h3>
-                    <p>Web3 NFT experience with Java character generation, Solidity contracts, and Unity prototype work.</p>
-                    <a class="link-arrow" href="https://birb-nft.tech" target="_blank" rel="noopener noreferrer">Explore birb-nft.tech</a>
-                </article>
-                <article class="card">
-                    <h3>GitHub Portfolio</h3>
-                    <p>Selection of academic and personal projects across finance, AI, and blockchain ecosystems.</p>
-                    <a class="link-arrow" href="https://github.com/Nikitich2033" target="_blank" rel="noopener noreferrer">Browse repositories</a>
-                </article>
-            </div>
-        </section>
-
-        <section class="section two-column">
-            <div>
-                <h2>Skills</h2>
-                <div class="detail-card compact">
-                    <h3>Languages & Frameworks</h3>
-                    <p>Python, Java, C#, JavaScript, Solidity, Scala, SQL, C++, React, Django.</p>
-                </div>
-                <div class="detail-card compact">
-                    <h3>Data & Blockchain</h3>
-                    <p>SciKit-Learn, Pandas, NumPy, Matplotlib, Seaborn, Hardhat, FunC, CCXT.</p>
-                </div>
-                <div class="detail-card compact">
-                    <h3>Tooling</h3>
-                    <p>Git, GitHub Actions, Docker, Linux, Android Studio, Telegram Bot API.</p>
-                </div>
-            </div>
-            <div>
-                <h2>Additional Highlights</h2>
-                <div class="detail-card compact">
-                    <ul>
-                        <li>Experienced in mining setups for Bitcoin, Ethereum, and ZCash, plus validator node operations.</li>
-                        <li>Comfortable managing cross-border teams, delegating workloads, and leading technical meetings.</li>
-                        <li>Highly organised and adaptable, with a focus on clear communication and continuous improvement.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="section two-column">
-            <div>
-                <h2>Languages</h2>
-                <div class="detail-card compact">
-                    <ul class="plain">
-                        <li>English | Fluent</li>
-                        <li>Russian | Fluent</li>
-                        <li>Italian | Intermediate</li>
-                        <li>Spanish | Intermediate</li>
-                    </ul>
-                </div>
-            </div>
-            <div>
-                <h2>Awards</h2>
-                <div class="detail-card compact">
-                    <p>2020 Barrus Prize for Computer Science for outstanding A-Level performance at Stowe School.</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="site-footer">
-        <div class="container">
-            <p>Updated August 15, 2025 | &copy; <span id="year"></span> Nikita Lyakhovoy</p>
+        <div class="detail-card">
+          <h3>Data &amp; Blockchain</h3>
+          <p>Pandas, NumPy, scikit-learn, Matplotlib, CCXT, sCrypt (BSV), FunC (TON), Solidity, Wallet/Web3</p>
         </div>
-    </footer>
+        <div class="detail-card">
+          <h3>Tooling</h3>
+          <p>Git, GitHub Actions, Docker, Linux, GA/Hotjar, Telegram Bot API</p>
+        </div>
+      </div>
+      <div>
+        <h2>Prizes &amp; Awards</h2>
+        <div class="detail-card">
+          <h3>Barrus Prize for Computer Science</h3>
+          <p class="muted">Awarded for outstanding A-level performance at Stowe School (2020).</p>
+        </div>
+      </div>
+    </section>
 
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="detail-card">
+        <h2 style="margin-top:0">Get in touch</h2>
+        <p>Open to roles in backend Python, data/quant platforms, and Web3/FinTech engineering.</p>
+        <div class="contact-list">
+          <a href="mailto:lyakhovoynikita@gmail.com">Email</a>
+          <a href="tel:+447532759159">Call</a>
+          <a href="https://www.linkedin.com/in/nikita-lyakhovoy-376188228/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/Nikitich2033" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container" style="text-align:center">
+    <p class="muted">Updated Oct 2, 2025 &middot; &copy; <span id="year"></span> Nikita Lyakhovoy</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const id=a.getAttribute('href');
+        if(!id||id==='#') return;
+        const el=document.querySelector(id);
+        if(!el) return;
+        e.preventDefault();
+        el.scrollIntoView({behavior:'smooth', block:'start'});
+      });
+    });
+  </script>
 </body>
 </html>
 
