@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="google-site-verification" content="PDG6D1yRUvm6-8cQby6qox_h257ZJHElZJUzFqqAovg" />
   <title>Nikita Lyakhovoy | Portfolio</title>
   <link rel="icon" href="logo.ico" type="image/x-icon">
   <meta name="description" content="Junior Software Engineer focused on Python, data/quant, and blockchain (AMMs, Web3, Telegram bots)." />
@@ -14,8 +15,14 @@
 <body>
   <header class="site-header">
     <div class="container top-nav">
-      <a class="brand" href="#">Nikita Lyakhovoy</a>
-      <nav class="nav-links" aria-label="Primary">
+      <div class="nav-header">
+        <a class="brand" href="#">Nikita Lyakhovoy</a>
+        <button class="nav-toggle" type="button" aria-controls="primary-nav" aria-expanded="false">
+          <span class="nav-toggle-label">Menu</span>
+          <span class="nav-toggle-icon" aria-hidden="true"><span></span></span>
+        </button>
+      </div>
+      <nav class="nav-links" aria-label="Primary" id="primary-nav">
         <a href="#profile" class="chip">Profile</a>
         <a href="#experience" class="chip">Experience</a>
         <a href="#education" class="chip">Education</a>
@@ -67,7 +74,7 @@
             </div>
           </header>
           <ul>
-            <li>Owned ecommerce and marketing stack; customised Liquid/HTML/CSS/JS themes, improving navigation flow and page speed.</li>
+            <li>Owned ecommerce and marketing stack on Shopify; customised Liquid/HTML/CSS/JS themes, improving navigation flow and page speed.</li>
             <li>Raised organic traffic by resolving crawl issues and maintaining XML sitemaps in GSC; aligned content and structure with brand.</li>
             <li>Coordinated order flows and stock visibility; set up simple dashboards for stakeholders.</li>
           </ul>
@@ -194,7 +201,7 @@
       </div>
     </section>
 
-    <!-- SELECTED PROJECTS (updated list) -->
+    <!-- SELECTED PROJECTS -->
     <section class="section" id="projects">
       <h2>Selected Projects</h2>
       <div class="cards">
@@ -218,6 +225,13 @@
           <p>Telegram Mini App with on-chain game logic on TON (FunC). Python ops bots for treasury &amp; community, analytics via GA/Hotjar.</p>
           <div class="tags"><span class="tag">FunC</span><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Python</span><span class="tag">Telegram API</span></div>
           <p><a class="highlight-link" href="https://tonflip.bot" target="_blank" rel="noopener">tonflip.bot</a></p>
+        </article>
+
+        <article class="card">
+          <h3>Restaurant Booking AI Chat Agent</h3>
+          <p>Prototype chat-based booking flow with automated slot handling, calendar sync, and webhook integration.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">Telegram API</span></div>
+          <p><a class="highlight-link" href="https://github.com/Nikitich2033/Booking_Chat_Task" target="_blank" rel="noopener">Booking_Chat_Task repo</a></p>
         </article>
 
         <article class="card">
@@ -276,6 +290,40 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.getElementById('primary-nav');
+    if(navToggle && navLinks){
+      navToggle.addEventListener('click', ()=>{
+        const isOpen = navLinks.classList.toggle('show');
+        navToggle.setAttribute('aria-expanded', String(isOpen));
+      });
+
+      const closeOnSelect = link=>{
+        link.addEventListener('click', ()=>{
+          if(window.matchMedia('(max-width: 720px)').matches){
+            navLinks.classList.remove('show');
+            navToggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+      };
+      navLinks.querySelectorAll('a').forEach(closeOnSelect);
+
+      const mq = window.matchMedia('(min-width: 721px)');
+      const resetNav = e=>{
+        if(e.matches){
+          navLinks.classList.remove('show');
+          navToggle.setAttribute('aria-expanded', 'false');
+        }
+      };
+      resetNav(mq);
+      if(typeof mq.addEventListener === 'function'){
+        mq.addEventListener('change', resetNav);
+      }else if(typeof mq.addListener === 'function'){
+        mq.addListener(resetNav);
+      }
+    }
+
     document.querySelectorAll('a[href^="#"]').forEach(a=>{
       a.addEventListener('click', e=>{
         const id=a.getAttribute('href');
@@ -289,5 +337,7 @@
   </script>
 </body>
 </html>
+
+
 
 

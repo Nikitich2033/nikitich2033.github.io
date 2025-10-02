@@ -25,11 +25,24 @@ a{color:var(--brand); text-decoration:none}
 a:hover{opacity:.9; text-decoration:underline}
 
 .container{max-width:1100px; margin:0 auto; padding:0 24px}
-header.site-header{position:sticky; top:0; backdrop-filter:blur(10px); background:linear-gradient(180deg, rgba(11,14,20,.9), rgba(11,14,20,.6)); border-bottom:1px solid rgba(255,255,255,.06); z-index:50}
-.top-nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0; gap:18px}
-.nav-links{display:flex; flex-wrap:wrap; gap:12px}
-.brand{font-weight:700; letter-spacing:.2px}
-.chip{display:inline-flex; align-items:center; gap:8px; padding:6px 12px; border:1px solid rgba(255,255,255,.08); border-radius:999px; color:var(--muted); font-size:.9rem}
+header.site-header{position:sticky; top:0; backdrop-filter:blur(10px); background:linear-gradient(180deg, rgba(11,14,20,.9), rgba(11,14,20,.6)); border-bottom:1px solid rgba(255,255,255,.06); z-index:50; margin-bottom:16px}
+.top-nav{display:flex; align-items:center; justify-content:space-between; padding:18px 0; gap:28px; margin-top:12px}
+.nav-header{display:flex; align-items:center; gap:16px; flex:1 1 auto; padding:6px 0; margin-bottom:12px}
+.nav-links{display:flex; flex-wrap:wrap; gap:18px; margin:12px 0; padding:4px 0}
+.nav-toggle{display:none; align-items:center; gap:8px; padding:6px 12px; border-radius:999px; border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.06); color:var(--text); font-weight:600; cursor:pointer; margin-left:auto}
+.nav-toggle:hover{background:rgba(255,255,255,.1)}
+.nav-toggle[aria-expanded='true']{background:rgba(255,255,255,.12)}
+.nav-toggle-label{font-size:.95rem}
+.nav-toggle-icon{position:relative; width:20px; height:14px; display:inline-block}
+.nav-toggle-icon::before, .nav-toggle-icon::after{content:''; position:absolute; left:0; width:100%; height:2px; background:currentColor; border-radius:2px; transition:transform .2s ease}
+.nav-toggle-icon::before{top:0}
+.nav-toggle-icon::after{bottom:0}
+.nav-toggle-icon span{position:absolute; left:0; width:100%; height:2px; background:currentColor; border-radius:2px; top:50%; transform:translateY(-50%); display:block; transition:opacity .2s ease}
+.nav-toggle[aria-expanded='true'] .nav-toggle-icon::before{transform:translateY(6px) rotate(45deg)}
+.nav-toggle[aria-expanded='true'] .nav-toggle-icon::after{transform:translateY(-6px) rotate(-45deg)}
+.nav-toggle[aria-expanded='true'] .nav-toggle-icon span{opacity:0}
+.brand{font-weight:700; letter-spacing:.2px; font-size:clamp(1.25rem, 2.6vw, 1.8rem)}
+.chip{display:inline-flex; align-items:center; gap:8px; padding:8px 14px; border:1px solid rgba(255,255,255,.08); border-radius:999px; color:var(--muted); font-size:.9rem}
 
 .hero{display:grid; grid-template-columns:1.2fr .8fr; gap:28px; padding:40px 0}
 .hero h1{font-size:clamp(2rem, 4.5vw, 2.4rem); margin:.25rem 0 .5rem}
@@ -78,9 +91,14 @@ footer{margin:40px 0 20px; color:var(--muted); font-size:.95rem}
 }
 
 @media (max-width:720px){
-  .container{padding:0 16px}
-  .top-nav{flex-direction:column; align-items:flex-start}
-  .nav-links{gap:10px}
+  .container{padding:0 20px}
+  .top-nav{flex-direction:column; align-items:flex-start; gap:16px; width:100%}
+  .nav-header{width:100%; gap:12px; padding:0; margin-bottom:8px}
+  .brand{font-size:1.4rem}
+  .nav-toggle{display:inline-flex}
+  .nav-links{display:none; flex-direction:column; width:100%; gap:12px; margin:12px 0 0; padding:16px 18px; border-radius:var(--radius); background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.08)}
+  .nav-links.show{display:flex}
+  .nav-links .chip{width:100%; justify-content:flex-start}
   .chip{font-size:.85rem}
   .hero{padding:32px 0; gap:20px}
   .hero-card{padding:20px}
@@ -100,8 +118,10 @@ footer{margin:40px 0 20px; color:var(--muted); font-size:.95rem}
 
 @media (max-width:480px){
   body{font-size:.95rem}
-  .nav-links{gap:8px}
-  .chip{padding:5px 10px}
+  .container{padding:0 18px}
+  .brand{font-size:1.2rem}
+  .nav-links{gap:10px; width:100%}
+  .chip{padding:5px 12px}
   .hero h1{font-size:1.8rem}
   .hero-card{padding:18px}
   .section{padding:24px 0}
@@ -114,4 +134,16 @@ footer{margin:40px 0 20px; color:var(--muted); font-size:.95rem}
   .contact-list a{background:rgba(12,23,42,.06); border:1px solid rgba(12,23,42,.12)}
   .btn{background:rgba(12,23,42,.06); border:1px solid rgba(12,23,42,.12); color:var(--text)}
   .btn:hover{background:rgba(12,23,42,.1)}
+}
+
+
+
+
+
+
+@media (prefers-color-scheme:light) and (max-width:720px){
+  .nav-links{background:rgba(12,23,42,.05); border:1px solid rgba(12,23,42,.12)}
+  .nav-toggle{background:rgba(12,23,42,.06); border:1px solid rgba(12,23,42,.12); color:var(--text)}
+  .nav-toggle:hover{background:rgba(12,23,42,.12)}
+  .nav-toggle[aria-expanded='true']{background:rgba(12,23,42,.16)}
 }
